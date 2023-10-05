@@ -3,7 +3,7 @@
 /**
  * main - Entry point for the program
  *
- * Description: Program prints sizes of diffrent types using prinf, sizeof function
+ * Description: Program prints sizes of diffrent types
  *
  * Return: Always 0 (Success)
 */
