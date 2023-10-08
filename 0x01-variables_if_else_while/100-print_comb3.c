@@ -11,8 +11,6 @@
  * Return: Always 0 (Success)
 */
 
-#include <stdio.h>
-
 int main(void)
 {
 	for (char num1 = '0'; num1 <= '9'; num1++)
