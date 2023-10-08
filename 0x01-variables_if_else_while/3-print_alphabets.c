@@ -16,11 +16,11 @@ int main(void)
 {
 	char letter = 'a';
 
-	while (letter != 'z')
+	while (letter <= 'z')
 		putchar(letter++);
 
 	letter = 'A';
-	while (letter != 'Z')
+	while (letter <= 'Z')
 		putchar(letter++);
 	putchar('\n');
 	return (0);
