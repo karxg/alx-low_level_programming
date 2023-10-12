@@ -10,16 +10,16 @@ int main(void)
 {
 	long long n = 612852475143;
 
-	int largestPrime = 0;
+	long long largestPrime = 0;
 
 	while (n % 2 == 0)
 	{
 		n /= 2;
 	}
 
-	for (int i = 3; i * i <= n; i += 2)
-	{
+	for (long long i = 3; i * i <= n; i += 2)
 
+	{
 		while (n % i == 0)
 		{
 			n /= i;
@@ -32,6 +32,6 @@ int main(void)
 		largestPrime = n;
 	}
 
-	printf("%d\n", largestPrime);
+	printf("%lld\n", largestPrime);
 	return (0);
 }
