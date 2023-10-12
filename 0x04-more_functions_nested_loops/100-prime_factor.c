@@ -8,30 +8,19 @@
 int main(void)
 
 {
-	long long n = 612852475143;
+	long int n, lp;
 
-	long long largestPrime = 0;
+	n = 612852475143;
 
-	while (n % 2 == 0)
+	for (lp = 2; lp <= n; lp++)
 	{
-		n /= 2;
-	}
-
-	for (long long i = 3; i * i <= n; i += 2)
-
-	{
-		while (n % i == 0)
+		if (n % lp == 0)
 		{
-			n /= i;
-			largestPrime = i;
+			n /= lp;
+			lp--;
 		}
 	}
+	printf("%ld\n", lp);
 
-	if (n > 1)
-	{
-		largestPrime = n;
-	}
-
-	printf("%lld\n", largestPrime);
 	return (0);
 }
