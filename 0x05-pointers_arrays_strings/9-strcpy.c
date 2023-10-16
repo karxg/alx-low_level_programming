@@ -6,6 +6,8 @@
 * @src: string parameter input
 * @dest: destination of the string
 *
+* Return: pointer to destination
+*
 */
 
 char *_strcpy(char *dest, char *src)
