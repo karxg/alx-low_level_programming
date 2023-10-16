@@ -2,7 +2,7 @@
 /**
 * rev_string - reverses a string.
 *
-* @s: The string to reverse.
+* @s: The string to reverse My School.
 
 */
 
