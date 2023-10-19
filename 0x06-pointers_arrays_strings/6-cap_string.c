@@ -1,29 +1,45 @@
 #include "main.h"
-#include <string.h>
 
 /**
- * cap_string - Capitalizes all words in a string.
+ * cap_string - Capitalizes all words of a string.
  *
- * @str: Pointer to string which to be modified.
+ * @src: String refrence.
  *
- * Return: Pointer to modified string.
+ * Return: All words of a string capital.
  */
 
-char *cap_string(char *str)
-{
-	int i = 1;
+char *cap_string(char *src)
 
-	while (str[i] != '\0')
+{
+	int i;
+
+	i = 0;
+	if ((src[i] >= 'a') && (src[i] <= 'z'))
 	{
-		if ((str[i - 1] == ' ' || str[i - 1] == '\t' || str[i - 1] == '\n' ||
-		str[i - 1] == ',' || str[i - 1] == ';' || str[i - 1] == '.' ||
-		str[i - 1] == '!' || str[i - 1] == '?' || str[i - 1] == '"' ||
-		str[i - 1] == '(' || str[i - 1] == ')' || str[i - 1] == '{' ||
-		str[i - 1] == '}') && (str[i] >= 'a' && str[i] <= 'z'))
+		src[i] = src[i] - 32;
+	}
+	while (src[i] != '\0')
+	{
+		if ((src[i] == ' ')
+		|| (src[i] == '\t')
+		|| (src[i] == '\n')
+		|| (src[i] == ',')
+		|| (src[i] == ';')
+		|| (src[i] == '.')
+		|| (src[i] == '!')
+		|| (src[i] == '?')
+		|| (src[i] == '"')
+		|| (src[i] == '(')
+		|| (src[i] == ')')
+		|| (src[i] == '{')
+		|| (src[i] == '}'))
 		{
-			str[i] = str[i] - 32;
+			if ((src[i + 1] >= 'a') && (src[i + 1] <= 'z'))
+			{
+				src[i + 1] = src[i + 1] - 32;
+			}
 		}
 		i++;
 	}
-	return (str);
+	return (src);
 }
