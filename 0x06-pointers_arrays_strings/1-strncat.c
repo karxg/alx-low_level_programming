@@ -2,17 +2,18 @@
 #include <string.h>
 
 /**
- * _strcat - Concatenates two strings
+ * _strncat - Concatenates two strings.
  *
  * @dest: Pointer to destination string.
  * @src: Pointer to source string.
+ * @n: Maximum number of bytes from @src.
  *
  * Return: Pointer to resulting string.
  */
 
-char *_strcat(char *dest, char *src)
+char *_strncat(char *dest, char *src, int n)
 
 {
-	strcat(dest, src);
+	strncat(dest, src, n);
 	return (dest);
 }
