@@ -10,7 +10,6 @@
  */
 
 char *cap_string(char *str)
-
 {
 	int i = 1;
 
@@ -26,6 +25,5 @@ char *cap_string(char *str)
 		}
 		i++;
 	}
-
 	return (str);
 }
