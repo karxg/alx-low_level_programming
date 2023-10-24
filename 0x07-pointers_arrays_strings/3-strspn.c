@@ -9,39 +9,24 @@
  * Return:
  */
 
-#include "holberton.h"
-
-/**
- * _strspn - Returns the number of bes in the initial segment of
- * s which consist only of bes from accept
- * @s: memory area
- * @accept: constant be b
- *
- * Return: On success 1.
- * On error, -1 is returned, and errno is set appropriately.
- */
 unsigned int _strspn(char *s, char *accept)
 
 {
-	int l, l2, i, j, b;
+	unsigned int i, j, b;
 
-	l = 0, l2 = 0, b = 0;
-	while (s[l] != '\0')
-		l++;
-	while (accept[l2] != '\0')
-		l2++;
-	for (i = 0; i < l; i++)
+	for (i = 0; *(s + i) != '\0'; i++)
 	{
-		for (j = 0; j < l2; j++)
+		b = 1;
+		for (j = 0; *(accept + j) != '\0'; j++)
 		{
 			if (*(s + i) == *(accept + j))
 			{
-				b += 1;
+				b = 0;
 				break;
 			}
 		}
-		if (j == l2)
+		if (b == 1)
 			break;
 	}
-	return (b);
+	return (i);
 }
