@@ -3,10 +3,10 @@
 
 /**
 * main - print the result of the multiplication, followed by a new line.
-
+*
 * @argc: number of arguments
 * @argv: array
-
+*
 * Return: 0 Success, 1 Error
 */
 
