@@ -24,13 +24,16 @@ int isNumber(char str[])
 }
 
 /**
-* main - A program that adds positive numbers.
+* main - program that adds positive numbers.
+*
 * @argc: The number of arguments passed.
 * @argv: An array of strings containing the arguments.
+*
 * Return: 0 for success, 1 for error.
 */
 
 int main(int argc, char *argv[])
+
 {
 	int i, sum = 0;
 
