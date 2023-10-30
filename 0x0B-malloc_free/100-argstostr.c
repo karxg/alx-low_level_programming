@@ -2,10 +2,10 @@
 #include <stdlib.h>
 
 /**
-* argstostr - Concatenates all arguments of the program into a string;
-* arguments are separated by a new line in the string.
-* @ac: The number of arguments passed to the program.
-* @av: An array of pointers to the arguments.
+* argstostr - Concatenates all arguments of the program
+*
+* @ac: number of arguments.
+* @av: array of pointers to arguments.
 *
 * Return: If ac == 0, av == NULL, or the function fails - NULL.
 * Otherwise - a pointer to the new string.
@@ -29,7 +29,7 @@ char *argstostr(int ac, char **av)
 			size++;
 	}
 
-	str = malloc(sizeof(char) * size + 1);
+	str = malloc(sizeof(char) * (size + ac) + 1);
 
 	if (str == NULL)
 		return (NULL);
@@ -43,9 +43,11 @@ char *argstostr(int ac, char **av)
 
 		if (arg < ac - 1)
 			str[index++] = '\n';
+	str[size] = '\0';
+
 	}
 
-	str[size] = '\0';
+
 
 	return (str);
 }
