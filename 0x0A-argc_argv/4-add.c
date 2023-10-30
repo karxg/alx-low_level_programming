@@ -5,9 +5,9 @@
 
 /**
 * isNumber - Check if a string represents a number.
-
+*
 * @str: The string to check.
-
+*
 * Return: 1 if it's not a number, 0 if it's a number.
 */
 
