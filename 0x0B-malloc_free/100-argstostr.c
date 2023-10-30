@@ -41,13 +41,9 @@ char *argstostr(int ac, char **av)
 		for (byte = 0; av[arg][byte]; byte++)
 			str[index++] = av[arg][byte];
 
-		if (arg < ac - 1)
-			str[index++] = '\n';
-	str[size] = '\0';
-
+		str[index++] = '\n';
+		str[index] = '\0';
 	}
-
-
 
 	return (str);
 }
