@@ -2,32 +2,32 @@
 #include <stdio.h>
 
 /**
- * create_array - creates an array of chars,
+ * create_arrayay - creates an arrayay of chars,
  * and initializes it with a specific char.
  *
- * @size: size of the array that to be initialized.
- * @c: char to intialize the array with
+ * @size: size of the arrayay that to be initialized.
+ * @c: char to intialize the arrayay with
  *
  * Return: when size == 0 NULL.
- *         Otherwise - pointer to the array.
+ *         Otherwise - pointer to the arrayay.
  */
 
-char *create_array(unsigned int size, char c)
+char *create_arrayay(unsigned int size, char c)
 
 {
-	char *arr;
+	char *array;
 
-	if
-		(size == 0)
+	if (size == 0)
 		return (NULL);
 
-	arr = malloc(sizeof(c) * size);
+	array = malloc(sizeof(c) * size);
 
-	if
-		(arr == NULL)
+	if (array == NULL)
 		return (NULL);
 
 	while (size)
-		arr[--size] = c;
-	return (arr);
+		array[--size] = c;
+
+	return (array);
 }
+
