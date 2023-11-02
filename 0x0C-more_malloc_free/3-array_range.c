@@ -2,17 +2,17 @@
 #include <stdlib.h>
 
 /**
- * newArray_range - Creates an newArray of integers ordered
- *               from min to max, inclusive.
+ * array_range - Creates an array of integers ordered
+ * from min to max
  *
- * @min: The first value of the newArray.
- * @max: The last value of the newArray.
+ * @min: The first value of the array.
+ * @max: The last value of the array.
  *
- * Return: If min > max or the function fails - NULL.
- *         Otherwise - a pointer to the newly created newArray.
+ * Return: When min > max or the function fails - NULL.
+ * Otherwise - pointer to the newly created array.
  */
 
-int *newArray_range(int min, int max)
+int *array_range(int min, int max)
 {
 	/*Declare a pointer to hold the array.*/
 	int *newArray;
