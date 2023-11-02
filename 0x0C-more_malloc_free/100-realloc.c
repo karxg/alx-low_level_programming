@@ -16,13 +16,12 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
 	void *new;
 	unsigned int i, min_size;
-	/*heck if reallocation is not needed, return the original pointer.*/
+
 	if (new_size == 0 && ptr != NULL)
 	{
 		free(ptr);
 		return (NULL);
 	}
-	/*Determine the minimum size for data copying during resizing.*/
 	if (old_size > new_size)
 	{
 		min_size = new_size;
@@ -40,7 +39,6 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 		new = malloc(new_size);
 		return (new);
 	}
-	/*Allocate a larger memory block for resizing when new_size is greater.*/
 	if (new_size > old_size)
 	{
 		new = malloc(new_size);
@@ -49,12 +47,10 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 			return (NULL);
 		}
 	}
-	/*Copy data from the old block to the new block, up to the minimum size.*/
 	for (i = 0; i < min_size; i++)
 	{
 		*((char *)new + i) = *((char *)ptr + i);
 	}
-	/*Free the old memory block.*/
 	free(ptr);
 
 	return (new);
