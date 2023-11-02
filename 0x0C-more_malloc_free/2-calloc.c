@@ -2,10 +2,12 @@
 #include <stdlib.h>
 
 /**
- * _calloc - allocates memory using calloc.
- * @nmemb: This is the number of elements
- * @size: This is the size of elements.
- * Return: array refrance or NULL
+ * _calloc - Allocates memory using calloc.
+ *
+ * @nmemb: The number of elements
+ * @size: The size of elements.
+ *
+ * Return: Array refrance or NULL when failed
  */
 
 void *_calloc(unsigned int nmemb, unsigned int size)
