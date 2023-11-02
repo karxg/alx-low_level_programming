@@ -43,13 +43,13 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	if (ptr == NULL)
 	{
 		newBlock = malloc(new_size);
-		return (new);
+		return (newBlock);
 	}
 	/*If the new size is greater than the old size, allocate a larger memory block for resizing.*/
 	if (new_size > old_size)
 	{
 		newBlock = malloc(new_size);
-		if (new == NULL)
+		if (newBlock == NULL)
 		{
 			return (NULL);
 		}
