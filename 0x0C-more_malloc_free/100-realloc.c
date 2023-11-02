@@ -53,8 +53,13 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 		{
 			return (NULL);
 		}
+		minSize = old_size;
 	}
-
+	/*Copy data from the old block to the new block, up to the minimum size.*/
+	for (i = 0; i < minSize; i++)
+	{
+		*((char *)newBlock + i) = *((char *)ptr + i);
+	}
 	free(ptr);
 
 	return (newBlock);
