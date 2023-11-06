@@ -1,0 +1,33 @@
+#include "dog.h"
+#include <stdlib.h>
+#include <stdio.h>
+/**
+* print_dog - Prints the attributes of a struct dog made previously
+* @d: Pointer to the struct dog to be printed
+*/
+
+void print_dog(struct dog *d)
+{
+	if (d == NULL)
+		return;
+
+	if (d->name != Null)
+	{
+		printf("Name: %s\n", d->name);
+	}
+	else
+	{
+		printf("Name: (nil)\n");
+	}
+
+	printf("Age: %f\n", d->age);
+
+	if (d->owner != NULL)
+	{
+		printf("Ownder: %s\n", d->owner)
+	}
+	else
+	{
+		printf("Owner: (nil)\n");
+	}
+}
