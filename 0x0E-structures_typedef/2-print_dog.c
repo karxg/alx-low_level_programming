@@ -1,6 +1,7 @@
 #include "dog.h"
 #include <stdlib.h>
 #include <stdio.h>
+
 /**
 * print_dog - Prints the attributes of a struct dog made previously
 * @d: Pointer to the struct dog to be printed
@@ -11,7 +12,7 @@ void print_dog(struct dog *d)
 	if (d == NULL)
 		return;
 
-	if (d->name != Null)
+	if (d->name != NULL)
 	{
 		printf("Name: %s\n", d->name);
 	}
@@ -24,7 +25,7 @@ void print_dog(struct dog *d)
 
 	if (d->owner != NULL)
 	{
-		printf("Ownder: %s\n", d->owner);
+		printf("Owner: %s\n", d->owner);
 	}
 	else
 	{
