@@ -1,10 +1,12 @@
 #include "function_pointers.h"
 
 /**
- * print_name - prints a name.
+ * array_iterator - executes a function given as a parameter
+ * on each element of an array.
  *
- * @name: name to print.
- * @f: function pointer.
+ * @array: array to run the function on.
+ * @size: size of the array.
+ * @action: pointer to the function to run.
  *
  * Return: void.
  */
