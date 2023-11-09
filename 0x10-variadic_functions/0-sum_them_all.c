@@ -5,8 +5,9 @@
  * sum_them_all - returns the sum of all its parameters.
  *
  * @n: number input.
+ * @... : numbers to calculated the sum of.
  *
- * Return: sum of numbers.
+ * Return: sum of numbers. and (0) when input numbers == 0.
  */
 
 int sum_them_all(const unsigned int n, ...)
