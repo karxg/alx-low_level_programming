@@ -6,9 +6,10 @@
  * print_numbers - prints numbers, followed by a new line.
  *
  * @n: number of integers passed to the function.
+ * @separator: string to be printed between numbers.
  * @... : numbers to calculated the sum of.
  *
- * Return: sum of numbers. and (0) when input numbers == 0.
+ * Return: (0).
  */
 
 void print_numbers(const char *separator, const unsigned int n, ...)
