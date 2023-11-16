@@ -1,14 +1,14 @@
-  section .data
-   hello db "Hello, Holberton", 0
+section .data
+    hello db "Hello, Holberton", 10
 
 section .text
-   global main
-   extern printf
+    global main
+    extern printf
 
 main:
-   push rdi
-   mov rdi, hello
-   call printf
-   pop rdi
-   mov eax, 0
-   ret
+    sub rsp, 8
+    mov rdi, hello
+    call printf
+    add rsp, 8
+    mov eax, 0
+    ret
