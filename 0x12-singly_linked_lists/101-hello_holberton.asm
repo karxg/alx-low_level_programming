@@ -1,16 +1,14 @@
-section .data
-   hello db 'Hello, World', 0xA
+  section .data
+   hello db "Hello, Holberton", 0
 
 section .text
    global main
    extern printf
 
 main:
-   push rbp
-   mov rbp, rsp
-   lea rdi, [rel hello]
-   xor rax, rax
+   push rdi
+   mov rdi, hello
    call printf
-   xor eax, eax
-   pop rbp
+   pop rdi
+   mov eax, 0
    ret
