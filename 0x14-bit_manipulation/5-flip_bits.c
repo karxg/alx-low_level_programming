@@ -14,7 +14,7 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 {
 	unsigned int numBits;
 
-	for (numBits = 0; n || m; ((n >>= 1, m >>= 1))
+	for (numBits = 0; n || m; (n >>= 1, m >>= 1))
 	{
 		if ((n & 1) != (m & 1))
 		{
