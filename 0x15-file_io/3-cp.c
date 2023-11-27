@@ -1,5 +1,16 @@
 #include "main.h"
 /**
+ * not_close - prints an error.
+ * @fd: value to print.
+ */
+
+void not_close(int fd)
+{
+	dprintf(STDERR_FILENO, "Error: Can't close fd %i\n", fd);
+	exit(100);
+}
+
+/**
  * main - copy a file into another
  * @argc: size
  * @argv: character.
@@ -75,13 +86,3 @@ void copyFile(char *source, char *dest)
 	not_close(dFile);
 }
 
-/**
- * not_close - prints an error.
- * @fd: value to print.
- */
-
-void not_close(int fd)
-{
-	dprintf(STDERR_FILENO, "Error: Can't close fd %i\n", fd);
-	exit(100);
-}
